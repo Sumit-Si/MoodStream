@@ -6,7 +6,7 @@ import { SongProvider } from "./context/SongContext";
 
 function App() {
 
-  const [theme,setTheme] = useState("winter");
+  const [theme,setTheme] = useState(localStorage.getItem("theme") || "winter");
 
   const darkTheme = () => {
     setTheme("dark");
@@ -19,13 +19,19 @@ function App() {
   useEffect(() => {
     document.querySelector("html").setAttribute("data-theme","");
     document.querySelector("html").setAttribute("data-theme",theme);
+    if(theme) localStorage.setItem("theme",theme);
   },[theme])
+
+  useEffect(() => {
+    const theme = localStorage.getItem("theme");
+    if(theme) setTheme(theme);
+  },[])
 
 
   return (
     <ThemeProvider value={{theme,darkTheme,lightTheme}}>
       <SongProvider value={{}}>
-        <div>
+        <div className="min-h-screen h-screen max-w-7xl w-full mx-auto">
           <Navbar />
           <Outlet />
         </div>

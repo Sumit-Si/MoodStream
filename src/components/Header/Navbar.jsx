@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
-    <div className="flex sticky z-50 top-1 justify-between shadow-md bg-base-300/90 items-center p-5 max-w-7xl mx-auto w-full">
+    <div className="flex sticky z-50 top-1 justify-between rounded-2xl shadow-md bg-base-300/90 items-center p-5 w-full mb-3">
       <div id="brand">
         <NavLink to={"/"} className="text-lg font-bold">
           MoodStream
