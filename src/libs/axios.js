@@ -3,10 +3,10 @@ import axios from "axios";
 const encodedParams = new URLSearchParams();
 
 const axiosInstance = axios.create({
-  baseURL: import.meta.env.VITE_RAPIDAPI_BASE_URL,
+  baseURL: import.meta.env.VITE_RAPID_API_BASE_URL,
   headers: {
-    "x-rapidapi-key": import.meta.env.VITE_RAPIDAPI_KEY,
-    "x-rapidapi-host": import.meta.env.VITE_RAPIDAPI_HOST,
+    "x-rapidapi-key": import.meta.env.VITE_RAPID_API_KEY,
+    "x-rapidapi-host": import.meta.env.VITE_RAPID_API_HOST,
     "Content-Type": "application/x-www-form-urlencoded",
   },
   data: encodedParams,

@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from "react-router-dom";
-import {Home,Explore,YourLibrary,Liked} from "./pages";
+import {Home,Explore,YourLibrary,Liked,Track} from "./pages";
 
 
 const router = createBrowserRouter(
@@ -13,6 +13,7 @@ const router = createBrowserRouter(
       <Route path='explore' element={<Explore />} />
       <Route path='your-library' element={<YourLibrary />} />
       <Route path='liked-songs' element={<Liked />} />
+      <Route path='track' element={<Track />} />
       {/* <Route path='details/:id' element={<JobDetails />} />
       <Route path='saved-job' element={<SavedJob />} /> */}
     </Route>

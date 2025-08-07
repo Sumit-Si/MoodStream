@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @plugin "daisyui" {
-  themes: winter --default, black --prefersdark;
+  themes: winter --default, luxury --prefersluxury;
 }
 
-@custom-variant dark (&:where([data-theme=black], [data-theme=black] *));
+@custom-variant luxury (&:where([data-theme=luxury], [data-theme=luxury] *));

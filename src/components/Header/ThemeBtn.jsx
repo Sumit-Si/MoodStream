@@ -18,7 +18,7 @@ function ThemeBtn() {
     <div>
       <label className="swap swap-rotate">
         {/* this hidden checkbox controls the state */}
-        <input type="checkbox" onChange={handleToggle} className="theme-controller" checked={theme === "dark"} value={theme} />
+        <input type="checkbox" onChange={handleToggle} className="theme-controller" checked={theme === "luxury"} value={theme} />
 
         {/* sun icon */}
         <svg

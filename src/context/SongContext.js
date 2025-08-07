@@ -1,7 +1,9 @@
 import { createContext, useContext } from "react";
 
 export const SongContext = createContext({
-    songs: [],
+    tracks: [],
+    mood: "happy",
+    changeMood: () => {},
     
 });
 
